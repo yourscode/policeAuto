@@ -47,7 +47,6 @@ var getMonth = (index, res) => {
             var excelName = ''
             var sheetName = ''
             excelName = key
-            var promise1 = new Promise((resolve, reject) => {
               var oldName = folderName + '\\' + key
               console.log(oldName)
               try {
@@ -161,8 +160,8 @@ var getMonth = (index, res) => {
                     // console.log(...userTableData);
                     let buffer = xlsx.build([{name:'sheet1',data:data0 }]);
                     // `sheet九江数据：+${userTableData.length}`
-                    let excelNameRegx = /[\u4e00-\u9fa5]+.\b/
-                    let filePath = excelName.match(excelNameRegx) + sheetName + areaArr[0] + userTableData0.length +"条数据" + '.xlsx';
+                    let excelNameRegx = /[\u4e00-\u9fa5]+[0-9]*/
+                    let filePath = excelName.match(excelNameRegx) +  "-"+ sheetName + "-" + areaArr[0] + userTableData0.length +"条数据" + '.xlsx';
                     let finalPath = path.resolve(__dirname,filePath)
                     fs.writeFileSync(finalPath,buffer,{'flag':'w'});
                   }
@@ -172,8 +171,8 @@ var getMonth = (index, res) => {
                     // console.log(...userTableData);
                     let buffer = xlsx.build([{name:'sheet1',data:data1}]);
                     // `sheet九江数据：+${userTableData.length}`
-                    let excelNameRegx = /[\u4e00-\u9fa5]+.\b/
-                    let filePath = excelName.match(excelNameRegx) + sheetName + areaArr[1] + userTableData1.length +"条数据" + '.xlsx';
+                    let excelNameRegx = /[\u4e00-\u9fa5]+[0-9]*/
+                    let filePath = excelName.match(excelNameRegx) +  "-"+ sheetName + "-" + areaArr[1] + userTableData1.length +"条数据" + '.xlsx';
                     let finalPath = path.resolve(__dirname,filePath)
                     fs.writeFileSync(finalPath,buffer,{'flag':'w'});
                   }
@@ -183,8 +182,8 @@ var getMonth = (index, res) => {
                     // console.log(...userTableData);
                     let buffer = xlsx.build([{name:'sheet1',data:data2}]);
                     // `sheet九江数据：+${userTableData.length}`
-                    let excelNameRegx = /[\u4e00-\u9fa5]+.\b/
-                    let filePath = excelName.match(excelNameRegx) + sheetName + areaArr[2] + userTableData2.length +"条数据" + '.xlsx';
+                    let excelNameRegx = /[\u4e00-\u9fa5]+[0-9]*/
+                    let filePath = excelName.match(excelNameRegx) +  "-"+ sheetName + "-" + areaArr[2] + userTableData2.length +"条数据" + '.xlsx';
                     let finalPath = path.resolve(__dirname,filePath)
                     fs.writeFileSync(finalPath,buffer,{'flag':'w'});
                   }
@@ -194,8 +193,8 @@ var getMonth = (index, res) => {
                     // console.log(...userTableData);
                     let buffer = xlsx.build([{name:'sheet1',data:data3}]);
                     // `sheet九江数据：+${userTableData.length}`
-                    let excelNameRegx = /[\u4e00-\u9fa5]+.\b/
-                    let filePath = excelName.match(excelNameRegx) + sheetName + areaArr[3] + userTableData3.length +"条数据" + '.xlsx';
+                    let excelNameRegx = /[\u4e00-\u9fa5]+[0-9]*/
+                    let filePath = excelName.match(excelNameRegx) +  "-"+ sheetName + "-" + areaArr[3] + userTableData3.length +"条数据" + '.xlsx';
                     let finalPath = path.resolve(__dirname,filePath)
                     fs.writeFileSync(finalPath,buffer,{'flag':'w'});
                   }
@@ -205,8 +204,8 @@ var getMonth = (index, res) => {
                     // console.log(...userTableData);
                     let buffer = xlsx.build([{name:'sheet1',data:data4}]);
                     // `sheet九江数据：+${userTableData.length}`
-                    let excelNameRegx = /[\u4e00-\u9fa5]+.\b/
-                    let filePath = excelName.match(excelNameRegx) + sheetName + areaArr[4] + userTableData4.length +"条数据" + '.xlsx';
+                    let excelNameRegx = /[\u4e00-\u9fa5]+[0-9]*/
+                    let filePath = excelName.match(excelNameRegx) +  "-"+ sheetName + "-" + areaArr[4] + userTableData4.length +"条数据" + '.xlsx';
                     let finalPath = path.resolve(__dirname,filePath)
                     fs.writeFileSync(finalPath,buffer,{'flag':'w'});
                   }
@@ -216,8 +215,8 @@ var getMonth = (index, res) => {
                     // console.log(...userTableData);
                     let buffer = xlsx.build([{name:'sheet1',data:data5}]);
                     // `sheet九江数据：+${userTableData.length}`
-                    let excelNameRegx = /[\u4e00-\u9fa5]+.\b/
-                    let filePath = excelName.match(excelNameRegx) + sheetName + areaArr[5] + userTableData5.length +"条数据" + '.xlsx';
+                    let excelNameRegx = /[\u4e00-\u9fa5]+[0-9]*/
+                    let filePath = excelName.match(excelNameRegx) +  "-"+ sheetName + "-" + areaArr[5] + userTableData5.length +"条数据" + '.xlsx';
                     let finalPath = path.resolve(__dirname,filePath)
                     fs.writeFileSync(finalPath,buffer,{'flag':'w'});
                   }
@@ -227,8 +226,8 @@ var getMonth = (index, res) => {
                     // console.log(...userTableData);
                     let buffer = xlsx.build([{name:'sheet1',data:data6}]);
                     // `sheet九江数据：+${userTableData.length}`
-                    let excelNameRegx = /[\u4e00-\u9fa5]+.\b/
-                    let filePath = excelName.match(excelNameRegx) + sheetName + areaArr[6] + userTableData6.length +"条数据" + '.xlsx';
+                    let excelNameRegx = /[\u4e00-\u9fa5]+[0-9]*/
+                    let filePath = excelName.match(excelNameRegx) +  "-"+ sheetName + "-" + areaArr[6] + userTableData6.length +"条数据" + '.xlsx';
                     let finalPath = path.resolve(__dirname,filePath)
                     fs.writeFileSync(finalPath,buffer,{'flag':'w'});
                   }
@@ -238,8 +237,8 @@ var getMonth = (index, res) => {
                     // console.log(...userTableData);
                     let buffer = xlsx.build([{name:'sheet1',data:data7}]);
                     // `sheet九江数据：+${userTableData.length}`
-                    let excelNameRegx = /[\u4e00-\u9fa5]+.\b/
-                    let filePath = excelName.match(excelNameRegx) + sheetName + areaArr[7] + userTableData7.length +"条数据" + '.xlsx';
+                    let excelNameRegx = /[\u4e00-\u9fa5]+[0-9]*/
+                    let filePath = excelName.match(excelNameRegx) +  "-"+ sheetName + "-" + areaArr[7] + userTableData7.length +"条数据" + '.xlsx';
                     let finalPath = path.resolve(__dirname,filePath)
                     fs.writeFileSync(finalPath,buffer,{'flag':'w'});
                   }
@@ -249,8 +248,8 @@ var getMonth = (index, res) => {
                     // console.log(...userTableData);
                     let buffer = xlsx.build([{name:'sheet1',data:data8}]);
                     // `sheet九江数据：+${userTableData.length}`
-                    let excelNameRegx = /[\u4e00-\u9fa5]+.\b/
-                    let filePath = excelName.match(excelNameRegx) + sheetName + areaArr[8] + userTableData8.length +"条数据" + '.xlsx';
+                    let excelNameRegx = /[\u4e00-\u9fa5]+[0-9]*/
+                    let filePath = excelName.match(excelNameRegx) +  "-"+ sheetName + "-" + areaArr[8] + userTableData8.length +"条数据" + '.xlsx';
                     let finalPath = path.resolve(__dirname,filePath)
                     fs.writeFileSync(finalPath,buffer,{'flag':'w'});
                   }
@@ -260,8 +259,8 @@ var getMonth = (index, res) => {
                     // console.log(...userTableData);
                     let buffer = xlsx.build([{name:'sheet1',data:data9}]);
                     // `sheet九江数据：+${userTableData.length}`
-                    let excelNameRegx = /[\u4e00-\u9fa5]+.\b/
-                    let filePath = excelName.match(excelNameRegx) + sheetName + areaArr[9] + userTableData9.length +"条数据" + '.xlsx';
+                    let excelNameRegx = /[\u4e00-\u9fa5]+[0-9]*/
+                    let filePath = excelName.match(excelNameRegx) +  "-"+ sheetName + "-" + areaArr[9] + userTableData9.length +"条数据" + '.xlsx';
                     let finalPath = path.resolve(__dirname,filePath)
                     fs.writeFileSync(finalPath,buffer,{'flag':'w'});
                   }
@@ -271,8 +270,8 @@ var getMonth = (index, res) => {
                     // console.log(...userTableData);
                     let buffer = xlsx.build([{name:'sheet1',data:data10}]);
                     // `sheet九江数据：+${userTableData.length}`
-                    let excelNameRegx = /[\u4e00-\u9fa5]+.\b/
-                    let filePath = excelName.match(excelNameRegx) + sheetName + areaArr[10] + userTableData10.length +"条数据" + '.xlsx';
+                    let excelNameRegx = /[\u4e00-\u9fa5]+[0-9]*/
+                    let filePath = excelName.match(excelNameRegx) +  "-"+ sheetName + "-" + areaArr[10] + userTableData10.length +"条数据" + '.xlsx';
                     let finalPath = path.resolve(__dirname,filePath)
                     fs.writeFileSync(finalPath,buffer,{'flag':'w'});
                   }
@@ -282,8 +281,8 @@ var getMonth = (index, res) => {
                     // console.log(...userTableData);
                     let buffer = xlsx.build([{name:'sheet1',data:data11}]);
                     // `sheet九江数据：+${userTableData.length}`
-                    let excelNameRegx = /[\u4e00-\u9fa5]+.\b/
-                    let filePath = excelName.match(excelNameRegx) + sheetName + areaArr[11] + userTableData11.length +"条数据" + '.xlsx';
+                    let excelNameRegx = /[\u4e00-\u9fa5]+[0-9]*/
+                    let filePath = excelName.match(excelNameRegx) +  "-"+ sheetName + "-" + areaArr[11] + userTableData11.length +"条数据" + '.xlsx';
                     let finalPath = path.resolve(__dirname,filePath)
                     fs.writeFileSync(finalPath,buffer,{'flag':'w'});
                   }
@@ -293,8 +292,8 @@ var getMonth = (index, res) => {
                     // console.log(...userTableData);
                     let buffer = xlsx.build([{name:'sheet1',data:data12}]);
                     // `sheet九江数据：+${userTableData.length}`
-                    let excelNameRegx = /[\u4e00-\u9fa5]+.\b/
-                    let filePath = excelName.match(excelNameRegx) + sheetName + areaArr[12] + userTableData12.length +"条数据" + '.xlsx';
+                    let excelNameRegx = /[\u4e00-\u9fa5]+[0-9]*/
+                    let filePath = excelName.match(excelNameRegx) +  "-"+ sheetName + "-" + areaArr[12] + userTableData12.length +"条数据" + '.xlsx';
                     let finalPath = path.resolve(__dirname,filePath)
                     fs.writeFileSync(finalPath,buffer,{'flag':'w'});
                   }
@@ -304,8 +303,8 @@ var getMonth = (index, res) => {
                     // console.log(...userTableData);
                     let buffer = xlsx.build([{name:'sheet1',data:data13}]);
                     // `sheet九江数据：+${userTableData.length}`
-                    let excelNameRegx = /[\u4e00-\u9fa5]+.\b/
-                    let filePath = excelName.match(excelNameRegx) + sheetName + 'others' + userTableData13.length +"条数据" + '.xlsx';
+                    let excelNameRegx = /[\u4e00-\u9fa5]+[0-9]*/
+                    let filePath = excelName.match(excelNameRegx) +  "-"+ sheetName + "-" + 'others' + userTableData13.length +"条数据" + '.xlsx';
                     let finalPath = path.resolve(__dirname,filePath)
                     fs.writeFileSync(finalPath,buffer,{'flag':'w'});
                   }
@@ -315,8 +314,8 @@ var getMonth = (index, res) => {
                     // console.log(...userTableData);
                     let buffer = xlsx.build([{name:'sheet1',data:data14}]);
                     // `sheet九江数据：+${userTableData.length}`
-                    let excelNameRegx = /[\u4e00-\u9fa5]+.\b/
-                    let filePath = excelName.match(excelNameRegx) + sheetName + 'areaArr[14]' + userTableData14.length +"条数据" + '.xlsx';
+                    let excelNameRegx = /[\u4e00-\u9fa5]+[0-9]*/
+                    let filePath = excelName.match(excelNameRegx) +  "-"+ sheetName + "-" + 'areaArr[14]' + userTableData14.length +"条数据" + '.xlsx';
                     let finalPath = path.resolve(__dirname,filePath)
                     fs.writeFileSync(finalPath,buffer,{'flag':'w'});
                   }
@@ -335,8 +334,6 @@ var getMonth = (index, res) => {
               // 输出日志
                 console.log('excel读取异常,error=%s', e.stack)
               }
-              // resolve(1)
-            })
           } 
           // else if (key === '通话.xlsx' || key === '通话.xls') {
           //   var promise2 = new Promise((resolve, reject) => {
