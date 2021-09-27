@@ -75,8 +75,11 @@ try {
                     else if (str2.match(rule) && i == 12) {
                         userTableData12.push(itemData.data[index])
                     }
-                    else if (str2 == "位置仅到地市" && i == 12) {   //i的值只为了循环得到一次userTableData13
+                    else if (str2.match(rule) && i == 13) {   //i的值只为了循环得到一次userTableData13
                         userTableData13.push(itemData.data[index])
+                    }
+                    else if (str2 == "位置仅到地市" && i == 12) {   //i的值只为了循环得到一次userTableData13
+                        userTableData14.push(itemData.data[index])
                     }
                 }
             }
@@ -222,7 +225,7 @@ try {
             // console.log(...userTableData);
             let buffer = xlsx.build([{ name: 'sheet1', data: data13 }]);
             let excelNameRegx = /[\u4e00-\u9fa5]+[0-9]*/
-            let filePath =  excelName.substring(0,excelName.length-4) + "-" + sheetName + "-" + 'others' + userTableData13.length + "条数据" + '.xlsx';
+            let filePath =  excelName.substring(0,excelName.length-4) + "-" + sheetName + "-" + areaArr[13] + userTableData13.length + "条数据" + '.xlsx';
             let finalPath = path.resolve(__dirname, filePath)
             fs.writeFileSync(finalPath, buffer, { 'flag': 'w' });
         }
@@ -232,7 +235,7 @@ try {
             // console.log(...userTableData);
             let buffer = xlsx.build([{ name: 'sheet1', data: data14 }]);
             let excelNameRegx = /[\u4e00-\u9fa5]+[0-9]*/
-            let filePath =  excelName.substring(0,excelName.length-4) + "-" + sheetName + "-" + 'areaArr[14]' + userTableData14.length + "条数据" + '.xlsx';
+            let filePath =  excelName.substring(0,excelName.length-4) + "-" + sheetName + "-" + 'others' + userTableData14.length + "条数据" + '.xlsx';
             let finalPath = path.resolve(__dirname, filePath)
             fs.writeFileSync(finalPath, buffer, { 'flag': 'w' });
         }

@@ -25,8 +25,8 @@ const folderName = process.env.HOME || process.env.USERPROFILE + '\\Desktop\\pol
 // })
 // drop table test;CREATE TABLE test(phone_id VARCHAR(20));
 // 封装一个函数
-var areaArr = ['浔阳','濂溪','柴桑','瑞昌','共青城','庐山','修水','武宁','永修','德安','都昌','湖口','彭泽']
-var areaRegx = ['/浔阳/g','/濂溪/g','/柴桑/g','/瑞昌/g','/共青城/g','/庐山/g','/修水/g','/武宁/g','/永修/g','/德安/g','/都昌/g','/湖口/g','/彭泽/g']
+var areaArr = ['浔阳','濂溪','柴桑','瑞昌','共青城','庐山','修水','武宁','永修','德安','都昌','湖口','彭泽','八里湖']
+var areaRegx = ['/浔阳/g','/濂溪/g','/柴桑/g','/瑞昌/g','/共青城/g','/庐山/g','/修水/g','/武宁/g','/永修/g','/德安/g','/都昌/g','/湖口/g','/彭泽/g','/八里湖/g']
 var getMonth = (index, res) => {
   return new Promise((resolve, reject) => {
     try {
@@ -125,10 +125,13 @@ var getMonth = (index, res) => {
                         else if(str2.match(rule) && i==12){
                           userTableData12.push(itemData.data[index])
                         }
-                        else if(str2 == "位置仅到地市" && i==12){   //i的值只为了循环得到一次userTableData13
+                        else if(str2.match(rule) && i==13){
                           userTableData13.push(itemData.data[index])
                         }
-                        // else if(str2.match(rule) && i==14){
+                        else if(str2 == "位置仅到地市" && i==12){   //i的值只为了循环得到一次userTableData14
+                          userTableData14.push(itemData.data[index])
+                        }
+                        // else if(str2.match(rule) && i==13){
                         //   userTableData14.push(itemData.data[index])
                         // }
                         // else if(str2.match(rule) && i==15){
@@ -307,7 +310,7 @@ var getMonth = (index, res) => {
                     let buffer = xlsx.build([{name:'sheet1',data:data13}]);
                     // `sheet九江数据：+${userTableData.length}`
                     let excelNameRegx = /[\u4e00-\u9fa5]+[0-9]*/
-                    let filePath = excelName.match(excelNameRegx) +  "-"+ sheetName + "-" + 'others' + userTableData13.length +"条数据" + '.xlsx';
+                    let filePath = excelName.match(excelNameRegx) +  "-"+ sheetName + "-" + areaArr[13] + userTableData13.length +"条数据" + '.xlsx';
                     let finalPath = path.resolve(__dirname,filePath)
                     fs.writeFileSync(finalPath,buffer,{'flag':'w'});
                   }
@@ -318,7 +321,7 @@ var getMonth = (index, res) => {
                     let buffer = xlsx.build([{name:'sheet1',data:data14}]);
                     // `sheet九江数据：+${userTableData.length}`
                     let excelNameRegx = /[\u4e00-\u9fa5]+[0-9]*/
-                    let filePath = excelName.match(excelNameRegx) +  "-"+ sheetName + "-" + 'areaArr[14]' + userTableData14.length +"条数据" + '.xlsx';
+                    let filePath = excelName.match(excelNameRegx) +  "-"+ sheetName + "-" + 'others' + userTableData14.length +"条数据" + '.xlsx';
                     let finalPath = path.resolve(__dirname,filePath)
                     fs.writeFileSync(finalPath,buffer,{'flag':'w'});
                   }
@@ -417,8 +420,11 @@ var getMonth = (index, res) => {
                                   else if (str2.match(rule) && i == 12) {
                                       userTableData12.push(itemData.data[index])
                                   }
-                                  else if (str2 == "位置仅到地市" && i == 12) {   //i的值只为了循环得到一次userTableData13
+                                  else if (str2.match(rule) && i == 13) {  
                                       userTableData13.push(itemData.data[index])
+                                  }
+                                  else if (str2 == "位置仅到地市" && i == 12) {   //i的值只为了循环得到一次userTableData13
+                                      userTableData14.push(itemData.data[index])
                                   }
                               }
                           }
@@ -564,7 +570,7 @@ var getMonth = (index, res) => {
                           // console.log(...userTableData);
                           let buffer = xlsx.build([{ name: 'sheet1', data: data13 }]);
                           let excelNameRegx = /[\u4e00-\u9fa5]+[0-9]*/
-                          let filePath = excelName.substring(0,excelName.length-4) + "-" + sheetName + "-" + 'others' + userTableData13.length + "条数据" + '.xlsx';
+                          let filePath = excelName.substring(0,excelName.length-4) + "-" + sheetName + "-" + areaArr[13] + userTableData13.length + "条数据" + '.xlsx';
                           let finalPath = path.resolve(__dirname, filePath)
                           fs.writeFileSync(finalPath, buffer, { 'flag': 'w' });
                       }
@@ -574,7 +580,7 @@ var getMonth = (index, res) => {
                           // console.log(...userTableData);
                           let buffer = xlsx.build([{ name: 'sheet1', data: data14 }]);
                           let excelNameRegx = /[\u4e00-\u9fa5]+[0-9]*/
-                          let filePath = excelName.substring(0,excelName.length-4) + "-" + sheetName + "-" + 'areaArr[14]' + userTableData14.length + "条数据" + '.xlsx';
+                          let filePath = excelName.substring(0,excelName.length-4) + "-" + sheetName + "-" + 'others' + userTableData14.length + "条数据" + '.xlsx';
                           let finalPath = path.resolve(__dirname, filePath)
                           fs.writeFileSync(finalPath, buffer, { 'flag': 'w' });
                       }
@@ -663,9 +669,12 @@ var getMonth = (index, res) => {
                                 else if (str2.match(rule) && i == 12) {
                                     userTableData12.push(itemData.data[index])
                                 }
-                                else if (str2 == "" && i == 12) {   //i的值只为了循环得到一次userTableData13
+                                else if (str2.match(rule) && i == 13) {   //i的值只为了循环得到一次userTableData13
                                     userTableData13.push(itemData.data[index])
                                 }
+                                else if (str2 == "" && i == 12) {   //i的值只为了循环得到一次userTableData13
+                                  userTableData14.push(itemData.data[index])
+                              }
                             }
                         }
                         else if(str == "" || str == null || str == ' '){
@@ -816,7 +825,7 @@ var getMonth = (index, res) => {
                         // console.log(...userTableData);
                         let buffer = xlsx.build([{ name: 'sheet1', data: data13 }]);
                         let excelNameRegx = /[\u4e00-\u9fa5]+[0-9]*/
-                        let filePath =  excelName.substring(0,excelName.length-4) + "-" + sheetName + "-" + 'others' + userTableData13.length + "条数据" + '.xlsx';
+                        let filePath =  excelName.substring(0,excelName.length-4) + "-" + sheetName + "-" + areaArr[13] + userTableData13.length + "条数据" + '.xlsx';
                         let finalPath = path.resolve(__dirname, filePath)
                         fs.writeFileSync(finalPath, buffer, { 'flag': 'w' });
                     }
@@ -826,7 +835,7 @@ var getMonth = (index, res) => {
                         // console.log(...userTableData);
                         let buffer = xlsx.build([{ name: 'sheet1', data: data14 }]);
                         let excelNameRegx = /[\u4e00-\u9fa5]+[0-9]*/
-                        let filePath =  excelName.substring(0,excelName.length-4) + "-" + sheetName + "-" + 'areaArr[14]' + userTableData14.length + "条数据" + '.xlsx';
+                        let filePath =  excelName.substring(0,excelName.length-4) + "-" + sheetName + "-" + 'others' + userTableData14.length + "条数据" + '.xlsx';
                         let finalPath = path.resolve(__dirname, filePath)
                         fs.writeFileSync(finalPath, buffer, { 'flag': 'w' });
                     }
