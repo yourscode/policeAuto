@@ -104,7 +104,7 @@ try {
             data0.push(...userTableData0)
             let buffer = xlsx.build([{ name: 'sheet1', data: data0 }]);
             let excelNameRegx = /[\u4e00-\u9fa5]+[0-9]*/
-            let filePath = excelName.match(excelNameRegx) + "-" + sheetName + "-" + areaArr[0] + userTableData0.length + "条数据" + '.xlsx';
+            let filePath =  excelName.substring(0,excelName.length-4) + "-" + sheetName + "-" + areaArr[0] + userTableData0.length + "条数据" + '.xlsx';
             let finalPath = path.resolve(__dirname, filePath)
             fs.writeFileSync(finalPath, buffer, { 'flag': 'w' });
         }
@@ -113,7 +113,7 @@ try {
             data1.push(...userTableData1)
             let buffer = xlsx.build([{ name: 'sheet1', data: data1 }]);
             let excelNameRegx = /[\u4e00-\u9fa5]+[0-9]*/
-            let filePath = excelName.match(excelNameRegx) + "-" + sheetName + "-" + areaArr[1] + userTableData1.length + "条数据" + '.xlsx';
+            let filePath =  excelName.substring(0,excelName.length-4) + "-" + sheetName + "-" + areaArr[1] + userTableData1.length + "条数据" + '.xlsx';
             let finalPath = path.resolve(__dirname, filePath)
             fs.writeFileSync(finalPath, buffer, { 'flag': 'w' });
         }
@@ -122,7 +122,7 @@ try {
             data2.push(...userTableData2)
             let buffer = xlsx.build([{ name: 'sheet1', data: data2 }]);
             let excelNameRegx = /[\u4e00-\u9fa5]+[0-9]*/
-            let filePath = excelName.match(excelNameRegx) + "-" + sheetName + "-" + areaArr[2] + userTableData2.length + "条数据" + '.xlsx';
+            let filePath =  excelName.substring(0,excelName.length-4) + "-" + sheetName + "-" + areaArr[2] + userTableData2.length + "条数据" + '.xlsx';
             let finalPath = path.resolve(__dirname, filePath)
             fs.writeFileSync(finalPath, buffer, { 'flag': 'w' });
         }
@@ -131,7 +131,7 @@ try {
             data3.push(...userTableData3)
             let buffer = xlsx.build([{ name: 'sheet1', data: data3 }]);
             let excelNameRegx = /[\u4e00-\u9fa5]+[0-9]*/
-            let filePath = excelName.match(excelNameRegx) + "-" + sheetName + "-" + areaArr[3] + userTableData3.length + "条数据" + '.xlsx';
+            let filePath =  excelName.substring(0,excelName.length-4) + "-" + sheetName + "-" + areaArr[3] + userTableData3.length + "条数据" + '.xlsx';
             let finalPath = path.resolve(__dirname, filePath)
             fs.writeFileSync(finalPath, buffer, { 'flag': 'w' });
         }
@@ -140,7 +140,7 @@ try {
             data4.push(...userTableData4)
             let buffer = xlsx.build([{ name: 'sheet1', data: data4 }]);
             let excelNameRegx = /[\u4e00-\u9fa5]+[0-9]*/
-            let filePath = excelName.match(excelNameRegx) + "-" + sheetName + "-" + areaArr[4] + userTableData4.length + "条数据" + '.xlsx';
+            let filePath =  excelName.substring(0,excelName.length-4) + "-" + sheetName + "-" + areaArr[4] + userTableData4.length + "条数据" + '.xlsx';
             let finalPath = path.resolve(__dirname, filePath)
             fs.writeFileSync(finalPath, buffer, { 'flag': 'w' });
         }
@@ -149,7 +149,7 @@ try {
             data5.push(...userTableData5)
             let buffer = xlsx.build([{ name: 'sheet1', data: data5 }]);
             let excelNameRegx = /[\u4e00-\u9fa5]+[0-9]*/
-            let filePath = excelName.match(excelNameRegx) + "-" + sheetName + "-" + areaArr[5] + userTableData5.length + "条数据" + '.xlsx';
+            let filePath =  excelName.substring(0,excelName.length-4) + "-" + sheetName + "-" + areaArr[5] + userTableData5.length + "条数据" + '.xlsx';
             let finalPath = path.resolve(__dirname, filePath)
             fs.writeFileSync(finalPath, buffer, { 'flag': 'w' });
         }
@@ -158,7 +158,7 @@ try {
             data6.push(...userTableData6)
             let buffer = xlsx.build([{ name: 'sheet1', data: data6 }]);
             let excelNameRegx = /[\u4e00-\u9fa5]+[0-9]*/
-            let filePath = excelName.match(excelNameRegx) + "-" + sheetName + "-" + areaArr[6] + userTableData6.length + "条数据" + '.xlsx';
+            let filePath =  excelName.substring(0,excelName.length-4) + "-" + sheetName + "-" + areaArr[6] + userTableData6.length + "条数据" + '.xlsx';
             let finalPath = path.resolve(__dirname, filePath)
             fs.writeFileSync(finalPath, buffer, { 'flag': 'w' });
         }
@@ -167,7 +167,7 @@ try {
             data7.push(...userTableData7)
             let buffer = xlsx.build([{ name: 'sheet1', data: data7 }]);
             let excelNameRegx = /[\u4e00-\u9fa5]+[0-9]*/
-            let filePath = excelName.match(excelNameRegx) + "-" + sheetName + "-" + areaArr[7] + userTableData7.length + "条数据" + '.xlsx';
+            let filePath =  excelName.substring(0,excelName.length-4) + "-" + sheetName + "-" + areaArr[7] + userTableData7.length + "条数据" + '.xlsx';
             let finalPath = path.resolve(__dirname, filePath)
             fs.writeFileSync(finalPath, buffer, { 'flag': 'w' });
         }
@@ -176,7 +176,7 @@ try {
             data8.push(...userTableData8)
             let buffer = xlsx.build([{ name: 'sheet1', data: data8 }]);
             let excelNameRegx = /[\u4e00-\u9fa5]+[0-9]*/
-            let filePath = excelName.match(excelNameRegx) + "-" + sheetName + "-" + areaArr[8] + userTableData8.length + "条数据" + '.xlsx';
+            let filePath =  excelName.substring(0,excelName.length-4) + "-" + sheetName + "-" + areaArr[8] + userTableData8.length + "条数据" + '.xlsx';
             let finalPath = path.resolve(__dirname, filePath)
             fs.writeFileSync(finalPath, buffer, { 'flag': 'w' });
         }
@@ -185,7 +185,7 @@ try {
             data9.push(...userTableData9)
             let buffer = xlsx.build([{ name: 'sheet1', data: data9 }]);
             let excelNameRegx = /[\u4e00-\u9fa5]+[0-9]*/
-            let filePath = excelName.match(excelNameRegx) + "-" + sheetName + "-" + areaArr[9] + userTableData9.length + "条数据" + '.xlsx';
+            let filePath =  excelName.substring(0,excelName.length-4) + "-" + sheetName + "-" + areaArr[9] + userTableData9.length + "条数据" + '.xlsx';
             let finalPath = path.resolve(__dirname, filePath)
             fs.writeFileSync(finalPath, buffer, { 'flag': 'w' });
         }
@@ -194,7 +194,7 @@ try {
             data10.push(...userTableData10)
             let buffer = xlsx.build([{ name: 'sheet1', data: data10 }]);
             let excelNameRegx = /[\u4e00-\u9fa5]+[0-9]*/
-            let filePath = excelName.match(excelNameRegx) + "-" + sheetName + "-" + areaArr[10] + userTableData10.length + "条数据" + '.xlsx';
+            let filePath =  excelName.substring(0,excelName.length-4) + "-" + sheetName + "-" + areaArr[10] + userTableData10.length + "条数据" + '.xlsx';
             let finalPath = path.resolve(__dirname, filePath)
             fs.writeFileSync(finalPath, buffer, { 'flag': 'w' });
         }
@@ -203,7 +203,7 @@ try {
             data11.push(...userTableData11)
             let buffer = xlsx.build([{ name: 'sheet1', data: data11 }]);
             let excelNameRegx = /[\u4e00-\u9fa5]+[0-9]*/
-            let filePath = excelName.match(excelNameRegx) + "-" + sheetName + "-" + areaArr[11] + userTableData11.length + "条数据" + '.xlsx';
+            let filePath =  excelName.substring(0,excelName.length-4) + "-" + sheetName + "-" + areaArr[11] + userTableData11.length + "条数据" + '.xlsx';
             let finalPath = path.resolve(__dirname, filePath)
             fs.writeFileSync(finalPath, buffer, { 'flag': 'w' });
         }
@@ -212,7 +212,7 @@ try {
             data12.push(...userTableData12)
             let buffer = xlsx.build([{ name: 'sheet1', data: data12 }]);
             let excelNameRegx = /[\u4e00-\u9fa5]+[0-9]*/
-            let filePath = excelName.match(excelNameRegx) + "-" + sheetName + "-" + areaArr[12] + userTableData12.length + "条数据" + '.xlsx';
+            let filePath =  excelName.substring(0,excelName.length-4) + "-" + sheetName + "-" + areaArr[12] + userTableData12.length + "条数据" + '.xlsx';
             let finalPath = path.resolve(__dirname, filePath)
             fs.writeFileSync(finalPath, buffer, { 'flag': 'w' });
         }
@@ -222,7 +222,7 @@ try {
             // console.log(...userTableData);
             let buffer = xlsx.build([{ name: 'sheet1', data: data13 }]);
             let excelNameRegx = /[\u4e00-\u9fa5]+[0-9]*/
-            let filePath = excelName.match(excelNameRegx) + "-" + sheetName + "-" + 'others' + userTableData13.length + "条数据" + '.xlsx';
+            let filePath =  excelName.substring(0,excelName.length-4) + "-" + sheetName + "-" + 'others' + userTableData13.length + "条数据" + '.xlsx';
             let finalPath = path.resolve(__dirname, filePath)
             fs.writeFileSync(finalPath, buffer, { 'flag': 'w' });
         }
@@ -232,7 +232,7 @@ try {
             // console.log(...userTableData);
             let buffer = xlsx.build([{ name: 'sheet1', data: data14 }]);
             let excelNameRegx = /[\u4e00-\u9fa5]+[0-9]*/
-            let filePath = excelName.match(excelNameRegx) + "-" + sheetName + "-" + 'areaArr[14]' + userTableData14.length + "条数据" + '.xlsx';
+            let filePath =  excelName.substring(0,excelName.length-4) + "-" + sheetName + "-" + 'areaArr[14]' + userTableData14.length + "条数据" + '.xlsx';
             let finalPath = path.resolve(__dirname, filePath)
             fs.writeFileSync(finalPath, buffer, { 'flag': 'w' });
         }
