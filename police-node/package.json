@@ -2,6 +2,7 @@
   "dependencies": {
     "excel-export": "^0.5.1",
     "express": "^4.17.1",
+    "multiparty": "^4.2.2",
     "node-gyp": "^7.1.2"
   }
 }
