@@ -28,6 +28,7 @@ var getMonth = (indey, res) => {
       var enteringJX = /[3604]_[\u4e5d\u6c5f\u5e02]+_[\u5165\u8d63\u7533\u8bf7\u8868]+__[0-9]*/
       var enteringChina = /[0-9]{8}[\u51fa\u5165\u5883\u4fe1\u606f]+[0-9]*/
       var highSpeedVehicle = /[0-9]*[\u5e74]+[0-9]*[\u6708]+[0-9]*[\u65e5]+[0-9]+[\u70b9]+-[0-9]*[\u5e74]+[0-9]*[\u6708]+[0-9]*[\u65e5]+[0-9]+[\u70b9]+[\u4e00-\u9fa5]+[\u9ad8\u901f\u8f66\u8f86]+[\u4e00-\u9fa5]+/
+    //   console.log(data);
       for (const key of data) {
           if(indey[0]){
             var excelName = ''
@@ -66,7 +67,7 @@ var getMonth = (indey, res) => {
                         var str = itemData.data[index][Number(indey[0] - 1)] + ''
                         var str2 = itemData.data[index][Number(indey[1] - 1)] + ''
                         var phoneNums = str.match(regx)
-                        if (regx.test(str)) {
+                        if (regx.test(str) || str.substring(0,4) == '3604') {
                             for (let i = 0; i < areaArr.length; i++) {
                                 let rule = new RegExp(areaArr[i], 'g')
                                 if (str2.match(rule) && i == 0) {
@@ -122,7 +123,7 @@ var getMonth = (indey, res) => {
                             }
                         }
                     }
-                    console.log('走访表数据提取：', 'userTableData14')
+                    console.log('走访表数据提取：', userTableData0)
                     //写入excel表
                     const conf = {}
                     conf.cols = []
@@ -1611,7 +1612,7 @@ var getMonth = (indey, res) => {
         //     }          
         //   }
         }
-        fs.unlink(oldName, (err) => {
+        fs.unlinkSync(oldName, (err) => {
             if (err) throw err
           })
     }
